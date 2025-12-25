@@ -54,7 +54,7 @@ if(SHADERC_ENABLE_EXECUTABLES)
   target_include_directories(glslc_exe PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/.. ${spirv-tools_SOURCE_DIR}/include)
   set_target_properties(glslc_exe PROPERTIES OUTPUT_NAME glslc)
   target_link_libraries(glslc_exe PRIVATE glslc shaderc_util shaderc)
-  add_dependencies(glslc_exe build-version)
+  add_dependencies(glslc_exe)
 endif(SHADERC_ENABLE_EXECUTABLES)
 
 shaderc_add_tests(
